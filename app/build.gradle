@@ -38,3 +38,10 @@ application {
     // Define the main class for the application.
     mainClass = 'sample.java.app.App'
 }
+
+// Example build.gradle snippet for Java version configuration
+tasks.withType(JavaCompile) {
+    options.fork = true
+    options.forkOptions.executable = 'javac'
+    options.compilerArgs = ["-source", "1.8", "-target", "1.8"]
+}
