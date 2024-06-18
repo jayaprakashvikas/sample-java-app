@@ -16,6 +16,7 @@ pipeline {
         
         stage('Build') {
             steps {
+                sh 'java -version'
                 sh "${env.GRADLE_HOME}/bin/gradle clean build"
             }
         }
