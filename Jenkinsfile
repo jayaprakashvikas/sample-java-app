@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         GRADLE_HOME = tool 'Gradle' // Configure Gradle in Jenkins Global Tool Configuration    
-        JAVA_HOME = tool 'opt/java/openjdk'
+        JAVA_HOME = 'opt/java/openjdk'
         DOCKER_REGISTRY = '767397806595.dkr.ecr.us-east-1.amazonaws.com'
         IMAGE_TAG = "${env.BUILD_NUMBER}" // Customize tag based on your requirements
     }
