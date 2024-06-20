@@ -54,3 +54,4 @@ sonarqube {
         property 'sonar.projectName', 'Sample Java App'
         // Add more SonarQube properties as needed
     }
+}
