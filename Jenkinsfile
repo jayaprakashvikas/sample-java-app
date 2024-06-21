@@ -30,7 +30,7 @@ pipeline {
         
         stage('Code Quality Scan') {
             steps {
-                withSonarQubeEnv(SonarQube) {
+                withSonarQubeEnv('SonarQube') {
                     sh "${env.GRADLE_HOME}/bin/gradle sonarqube"
                 }
             }
