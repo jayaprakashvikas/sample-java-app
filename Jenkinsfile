@@ -36,25 +36,7 @@ pipeline {
                 }
             }
         }
-        
-        stage('Build Docker Image') {
-            steps {
-                script {
-                    docker.build "${env.DOCKER_REGISTRY}/sample-java-app:${env.IMAGE_TAG}"
-                }
-            }
-        }
-        
-/*       stage('Push Docker Image to ECR') {
-            steps {
-                script {
-                    docker.withRegistry('https://your-aws-account-id.dkr.ecr.your-region.amazonaws.com', 'ecr:your-ecr-credentials-id') {
-                        docker.image("${env.DOCKER_REGISTRY}/your-app-name:${env.IMAGE_TAG}").push()
-                    }
-                }
-            }
-        } */
-        
+                
     }
     
     post {
