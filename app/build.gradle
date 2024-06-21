@@ -49,7 +49,7 @@ tasks.withType(JavaCompile) {
 
 sonarqube {
     properties {
-        property 'sonar.host.url', 'http://localhost:9000' 
+        property 'sonar.host.url', 'http://172.17.0.3:9000' 
         property 'sonar.projectKey', 'com.example:sample-java-app'
         property 'sonar.projectName', 'Sample Java App'
         // Add more SonarQube properties as needed
