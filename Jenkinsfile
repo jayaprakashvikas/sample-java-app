@@ -5,6 +5,8 @@ pipeline {
         GRADLE_HOME = tool 'Gradle' // Configure Gradle in Jenkins Global Tool Configuration   
         DOCKER_REGISTRY = '767397806595.dkr.ecr.us-east-1.amazonaws.com'
         IMAGE_TAG = "${env.BUILD_NUMBER}" // Customize tag based on your requirements
+        SONAR_HOST_URL = 'http://172.17.0.3:9000'
+        SONAR_AUTH_TOKEN = credentials('sonar-token')
     }
     
     stages {
