@@ -47,7 +47,7 @@ tasks.withType(JavaCompile) {
     options.compilerArgs = ["-source", "1.8", "-target", "1.8"]
 }
 
-sonarqube {
+sonar {
     properties {
         property 'sonar.host.url', 'http://172.17.0.3:9000' 
         property 'sonar.projectKey', 'com.example:sample-java-app'
